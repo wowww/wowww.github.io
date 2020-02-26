@@ -1,0 +1,30 @@
+.container {
+  overflow: hidden;
+  width: 60%;
+  margin: 20px auto;
+  background: #333;
+  border-radius: 6px;
+}
+
+.container input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 30px;
+}
+
+.suggestions {
+  border-top: 2px solid #999;
+}
+
+.suggestions > div {
+  padding: 15px;
+  font-size: 20px;
+  color: #fff;
+  border-top: 1px solid #666;
+  cursor: pointer;
+}
+
+.suggestions > div:hover {
+  background-color: #1e4dd4;
+}
