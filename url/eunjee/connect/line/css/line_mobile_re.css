@@ -1,0 +1,370 @@
+@charset utf-8;
+@import url(reset.css);
+
+/* 공통요소 */
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; clear:both; content:"";}
+.sr-only{position:absolute; left:-9999px;}
+
+header{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	background-color:#FFF;
+	border-bottom:2px solid #3b3b3b;
+	z-index:1000;
+}
+header>.container{
+	position:relative;
+	height:47px;
+}
+header>.container>h1{
+	position:absolute;
+	left:10px;
+	top:50%;
+	width:54px;
+	margin-top:-10px;
+	background-image:url(../images/line_header_img_ci.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+header>.container>h1>a{
+	display:block;
+	height:21px;
+	text-indent:-9999px;
+}
+
+/* 모바일 메뉴버튼 */
+header>.container>.btn-gnb{
+	position:absolute;
+	right:10px;
+	top:50%;
+	width:22px;
+	height:18px;
+	margin-top:-9px;
+	text-indent:-9999px;
+	background:none;
+	background-color:#FFF;
+	background-image:url(../images/line_mobile_sp_ico.png);
+	background-size:557px auto;
+	background-position:-75px 0;
+	background-repeat:no-repeat;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+
+header>.container>.btn-gnb.clse{ /*닫기버튼*/
+	background-position:-52px 0;
+}
+
+/* 메인메뉴 */
+header>.container>nav{
+	display:none;/*추가함*/
+	position:absolute;
+	left:0;
+	top:50px;
+	width:100%;
+	height:9999px;
+	background-color:#fff;
+}
+header>.container>nav>.gnb>li{
+	border-bottom:1px solid #ccc;
+}
+header>.container>nav>.gnb>li>a{
+	display:block;
+	position:relative;
+	width:100%;
+	height:50px;
+	color:#444;
+	font-weight:600;
+	font-size:1.2em;
+	line-height:50px;
+	text-indent:2.5em;
+}
+header>.container>nav>.gnb>li>a:hover{color:#00c402;}
+
+header>.container>nav>.gnb>li>a:before{
+	display:block;
+	position:absolute;
+	left:5px;
+	width:42px;
+	height:50px;
+	background-image:url(../images/line_mobile_sp_ico.png);
+	background-size:557px auto;
+	background-repeat:no-repeat;
+	content:"";
+	
+}
+
+header>.container>nav>.gnb>li:nth-child(1)>a:before{
+	background-position:-305px 0;
+}
+header>.container>nav>.gnb>li:nth-child(2)>a:before{
+	background-position:-217px 0;
+}
+header>.container>nav>.gnb>li:nth-child(3)>a:before{
+	background-position:-129px 0;
+}
+header>.container>nav>.gnb>li:nth-child(4)>a:before{
+	background-position:-261px 0;
+}
+header>.container>nav>.gnb>li:nth-child(5)>a:before{
+	background-position:-305px 0;
+}
+
+header>.container>nav>.gnb>li:nth-child(6)>a:before{
+	background:none;
+}
+header>.container>nav>.gnb>li>i.fa{
+	position:absolute;
+	left:13px;
+	margin-top:12px;
+	color:#444;
+	font-size:1.8em;
+}
+
+header>.container>nav>.gnb>li>a:after{
+	display:block;
+	position:absolute;
+	right:25px;
+	top:50%;
+	width:6px;
+	height:10px;
+	margin-top:-5px;
+	background-image:url(../images/line_mobile_sp_ico.png);
+	background-position:-99px 0;
+	background-size:557px auto;
+	background-repeat:no-repeat;
+	content:"";
+}
+
+
+
+
+/* 메인배너 */
+section>.line_mainbanr{
+	overflow:hidden;
+	position:relative;
+	width:100%; /* 100px => 100% 브라우저의 가로폭에 꽉차는 배너를 구현하기 위해서는 width값을 %로 계산해야 한다. */
+	height:300px;
+	margin-top:50px;
+}
+
+section>.line_mainbanr>.container{
+	position:absolute;
+	left:0; /* %퍼센트 단위로 이동 -100% -200% -300% (4장이니까 -300%까지) */
+	top:0;
+	width:400%;/* 400px => 400% */
+	height:100%;
+}
+section>.line_mainbanr>.container>li{
+	float:left;
+	position:relative;
+	width:25%; /* 100px => 25% */
+	height:100%;
+	background-position:center top;
+	background-size:640px auto;
+	background-repeat:no-repeat;
+}
+
+
+section>.line_mainbanr>.container>li:nth-child(1){
+   background-image:url(../images/line_mainbanr_mobile_001.png);
+}
+section>.line_mainbanr>.container>li:nth-child(2){
+	background-image:url(../images/line_mainbanr_mobile_002.png);
+}
+section>.line_mainbanr>.container>li:nth-child(3){
+	background-image:url(../images/line_mainbanr_mobile_003.png);
+}
+section>.line_mainbanr>.container>li:nth-child(4){
+	background-image:url(../images/line_mainbanr_mobile_004.png);
+}
+
+
+section>.line_mainbanr>.container>li>p{
+	text-indent:-9999px;
+}
+section>.line_mainbanr>.container>li>p>a{
+	display:block;
+	position:absolute;
+	left:50%;
+	border:1px solid yellow;
+}
+
+
+section>.line_mainbanr>.container>li:nth-child(2)>p>a,
+section>.line_mainbanr>.container>li:nth-child(3)>p>a{
+	top:140px;
+	width:64px;
+	height:16px;
+}
+section>.line_mainbanr>.container>li:nth-child(2)>p>a.android,
+section>.line_mainbanr>.container>li:nth-child(3)>p>a.android{
+	margin-left:-70px;
+}
+section>.line_mainbanr>.container>li:nth-child(2)>p>a.ios,
+section>.line_mainbanr>.container>li:nth-child(3)>p>a.ios{
+	margin-left:3px;
+}
+
+section>.line_mainbanr>.container>li:nth-child(4)>p>a{
+	top:124px;
+	width:78px;
+	height:18px;
+	margin-left:-40px;
+}
+
+/* 인디케이터 */
+section>.line_mainbanr>.pagination{
+	position:absolute;
+	left:50%;
+	bottom:17px;
+	width:112px;
+	margin-left:-56px;
+}
+section>.line_mainbanr>.pagination>li{
+	float:left;
+	width:13px;
+	margin-right:20px;
+	background-image:url(../images/line_header_sp_sns.png);
+	background-position:-872px 0;
+	background-repeat:no-repeat;
+}
+
+section>.line_mainbanr>.pagination>li.on,
+section>.line_mainbanr>.pagination>li:hover{
+	background-position:-858px 0;
+}
+
+section>.line_mainbanr>.pagination>li:last-child{
+	margin-right:0;
+}
+section>.line_mainbanr>.pagination>li>a{
+	display:block;
+	height:13px;
+	text-indent:-9999px;
+}
+
+
+
+/* 다운로드 버튼 */
+section>.dnld>a{
+	display:block;
+	margin:0.6em;
+	padding:18px 0;
+	color:#fff;
+	font-size:1.2em;
+	text-align:center;
+	background-color:#1dcd00;
+}
+
+
+/* 주요서비스 */
+section>.srv{
+	color:#444;
+	border-bottom:1px solid #dedede;
+	box-sizing:border-box;
+}
+section>article>h3{
+	margin-top:20px;
+	padding:0 20px;
+	font-weight:400;
+	font-size:2em;
+	line-height:1.2;/*120%*/
+}
+section>article>p{
+	padding:10px 0 20px 20px;
+	font-size:1.2em;
+	line-height:25px;
+}
+
+
+/* 푸터영역 */
+footer{background-color:#333;}
+
+footer>.container{
+	position:relative;
+	padding:15px 0;
+}
+footer>.container>nav>.fnb{
+	margin-left:14px;
+	font-size:0.9em;
+}
+footer>.container>nav>.fnb>a{
+	color:#838383;
+	line-height:20px;
+}
+footer>.container>nav>.fnb>.bar{
+	margin:0 8px;
+}
+footer>.container>form select{
+	width:80px;
+	height:30px;
+	margin:5px 0 0 14px;
+	padding-left:10px;
+	color:#acacac;
+	background-color:#333;
+	outline:0;
+	
+	/* 네이티브 외형을 감춰서 화살표가 없어졌기 때문에 넣어줌 */
+    background-image:url(../images/line_footer_ico_arr.png);
+    background-position:50px 0;
+    background-size:contain;
+    background-repeat:no-repeat;
+   
+    border:1px solid #999;
+    border-radius:0;/*iOS 둥근모서리 제거*/
+   
+    -webkit-appearance:none;/*네이티브 외형 감추기*/
+    -moz-appearance:none;/*네이티브 외형 감추기*/
+    appearance:none;/*네이티브 외형 감추기*/
+}
+footer>.container>address{
+	margin-top:15px;
+	padding-left:14px;
+	color:#838383;
+	font-weight:800;
+}
+
+footer>.container>.validator{
+   display:block;
+   right:20px;
+   bottom:17px;
+   position:absolute;
+   width:80px;
+   height:15px;
+   margin:12px 0 0 120px;
+   text-indent:-9999px;
+   background-image:url(../images/line_footer_img_validator.png);
+   background-repeat:no-repeat;
+}
+
+footer>.container>.wa{
+   display:block;
+   position:absolute;
+   right:34px;
+   bottom:32px;
+   width:35px;
+   height:35px;
+   margin:3px 0 0 220px;
+   text-indent:-9999px;
+   background-image:url(../images/line_footer_img_wa.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

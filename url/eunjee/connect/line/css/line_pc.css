@@ -1,0 +1,482 @@
+@charset "utf-8";
+@inport url(reset.css);
+
+/*공통요소*/
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;clear:both;content:'';}
+.sr-only{position:absolute;left:-9999px;}
+
+header{
+	position:fixed;
+	left:0;/*fixed 했을 때 안전하게 써주는 게 좋다*/
+	top:0;/*fixed 했을 때 안전하게 써주는 게 좋다*/
+	width:100%;
+	background-color:#FFF;
+	border-bottom:3px solid #3b3b3b;
+	z-index:1000;
+}
+header>.container{
+	position:relative;
+	width:960px;
+	height:66px;
+	margin:0 auto;
+}
+header>.container>h1{
+	position:absolute;
+	left:0;
+	top:22px;
+	width:54px;
+	background-image:url(../images/line_header_img_ci.png);/*a한테 하기보다는 부모한테 하는게 효율적*/
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+header>.container>h1>a{
+	display:block;
+	height:21px;
+	text-indent:-9999px;/*a한테 주는게 효율적*/
+}
+
+
+/*메인메뉴*/
+header>.container>nav{
+	position:absolute;/*부모를 움직이는게 좋음*/
+	left:70px;
+	top:28px;
+}
+header>.container>nav>.gnb{
+	
+}
+header>.container>nav>.gnb>li{
+	float:left;
+	border-right:1px solid #ccc;
+}
+
+header>.container>nav>.gnb>li:last-child{border-right:none;}
+header>.container>nav>.gnb>li>a{
+	display:block;
+	height:14px;/*오른쪽 구분 bar의 높이*/
+	padding:0 15px;
+	color:#444;
+	line-height:14px;
+}
+header>.container>nav>.gnb>li:hover>a{
+	color:#00c402;
+}
+
+/*언어선택*/
+header>.container>.opt{
+	position:absolute;
+	right:90px;
+	top:22px;
+	width:140px;
+}
+header>.container>.opt>.input_group:hover{
+	background-color:#eee;
+}
+header>.container>.opt>.input_group{
+	position:relative;
+	border:1px solid #dfdfdf;
+	box-sizing:border-box;
+}
+header>.container>.opt>.input_group>input{
+	width:100%;
+	height:22px;
+	font-size:0.85em;
+	text-indent:10px;
+	background:none;
+	border:0;
+	outline:0;
+	cursor:pointer;
+}
+
+header>.container>.opt>.input_group>.arrow{/*픽셀쪼개기*/
+	display:block;
+	position:absolute;
+	right:5px;
+	top:10px;
+	width:0;
+	height:0;
+	text-indent:-9999px;
+	border-width:4px;
+	border-style:solid;
+	border-color:#aaa transparent transparent transparent;
+	cursor:pointer;
+}
+header>.container>.opt>.input_group:hover>.langlist{display:block;}
+
+header>.container>.opt>.input_group>.langlist{
+	display:none;
+	position:absolute;
+	right:-1px;
+	top:24px;
+	width:279px;
+	background-color:#FFF;
+	border:1px solid #dfdfdf;
+	box-sizing:border-box;
+}
+header>.container>.opt>.input_group>.langlist>li{
+	float:left;
+	width:128px;
+	padding:8px 0 0 10px;
+}
+header>.container>.opt>.input_group>.langlist>li:nth-child(2n+1){
+	border-right:1px solid #dfdfdf;
+}
+header>.container>.opt>.input_group>.langlist>li>a{
+	display:block;
+	height:20px;
+	font-size:0.85em;
+	line-height:20px;
+}
+header>.container>.opt>.input_group>.langlist>li.on>a,
+header>.container>.opt>.input_group>.langlist>li>a:hover{color:#00c402;}
+
+/*유튜브, 페이스북*/
+header>.container>.sns{
+	position:absolute;
+	right:0;
+	top:26px;
+	width:71px;
+}
+header>.container>.sns>li{
+	float:left;
+	background-image:url(../images/line_header_sp_sns.png);
+	background-repeat:no-repeat;
+}
+header>.container>.sns>li:first-child{
+	width:46px;
+	background-position:-1042px 0;
+}
+header>.container>.sns>li:last-child{
+	width:10px;
+	margin-left:15px;
+	background-position:-802px 0;
+}
+header>.container>.sns>li>a{
+	display:block;
+	height:18px;
+	text-indent:-9999px;
+}
+
+
+/*섹션영역*/
+
+/*섹션-메인배너*/
+section{
+	margin-top:69px;
+}
+section>.line_mainbanr{/*액자역할*/
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:440px;
+}
+section>.line_mainbanr>.container{
+	position:absolute;
+	left:0;
+	top:0;
+	width:400%;
+	height:100%;
+}
+section>.line_mainbanr>.container>li{
+	float:left;
+	position:relative;
+	width:25%;/*부모의 1/4크기*/
+	height:100%;
+}
+section>.line_mainbanr>.container>li:nth-child(1){
+	background-image:url(../images/line_mainbanr_pc_001.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+section>.line_mainbanr>.container>li:nth-child(2){
+	background-image:url(../images/line_mainbanr_pc_002.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+section>.line_mainbanr>.container>li:nth-child(3){
+	background-image:url(../images/line_mainbanr_pc_003.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+section>.line_mainbanr>.container>li:nth-child(4){
+	background-image:url(../images/line_mainbanr_pc_004.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+
+section>.line_mainbanr>.container>li>p{
+	text-indent:-9999px;
+}
+section>.line_mainbanr>.container>li>p>a{
+	display:block;
+	position:absolute;
+	left:50%;/*중앙을 기준을 ml를 적용해야 브라우저 가로폭이 변해도 항상 링크영역이 유지된다.*/
+}
+section>.line_mainbanr>.container>li:nth-child(1)>p>a{
+	top:273px;
+	width:133px;
+	height:32px;
+	margin-left:-480px;
+}
+
+section>.line_mainbanr>.container>li:nth-child(2)>p>a{
+	top:312px;
+	width:113px;
+	height:32px;
+}
+section>.line_mainbanr>.container>li:nth-child(2)>p>a.android{
+	margin-left:-480px;
+}
+section>.line_mainbanr>.container>li:nth-child(2)>p>a.ios{
+	margin-left:-354px;
+}
+section>.line_mainbanr>.container>li:nth-child(3)>p>a{
+	top:316px;
+	width:113px;
+	height:32px;
+}
+section>.line_mainbanr>.container>li:nth-child(3)>p>a.android{
+	margin-left:-481px;
+}
+section>.line_mainbanr>.container>li:nth-child(3)>p>a.ios{
+	margin-left:-355px;
+}
+
+section>.line_mainbanr>.container>li:nth-child(4)>p>a{
+	top:316px;
+	width:140px;
+	height:32px;
+	margin-left:-480px;
+}
+
+section>.line_mainbanr>.navigation{
+	display:block;
+	position:absolute;
+	top:50%;
+	width:80px;
+	height:100px;
+	margin-top:-50px;
+	text-indent:-9999px;
+	background-image:url(../images/line_mainbanr_btn_nav.png);
+	background-repeat:no-repeat;
+}
+section>.line_mainbanr>.prev{
+	left:0;
+	background-position: -5px -225px;
+}
+section>.line_mainbanr>.prev:hover{
+	background-position: -5px -335px;
+}
+section>.line_mainbanr>.next{
+	right:0;
+	background-position: -5px -5px;
+}
+section>.line_mainbanr>.next:hover{
+	background-position: -5px -115px;
+}
+
+section>.line_mainbanr>.pagination{
+	position:absolute;
+	left:50%;
+	bottom:17px;
+	width:112px;
+	margin-left:-56px;
+}
+section>.line_mainbanr>.pagination>li{
+	float:left;
+	width:13px;
+	margin-right:20px;
+	background-image:url(../images/line_header_sp_sns.png);
+	background-position:-872px 0;
+	background-repeat:no-repeat;
+}
+section>.line_mainbanr>.pagination>li.on,
+section>.line_mainbanr>.pagination>li:hover{background-position:-858px 0;}
+
+section>.line_mainbanr>.pagination>li:last-child{margin-right:0;}
+
+section>.line_mainbanr>.pagination>li>a{
+	display:block;
+	height:13px;
+	text-indent:-9999px;
+}
+
+
+/*섹션-주요서비스*/
+section>article.srv{
+	width:960px;
+	margin:0 auto;
+	padding-top:100px;
+	box-sizing:border-box;
+}
+section>article.srv>.frame{
+	float:left;
+	display:block;
+	height:450px;
+	height:556px;
+}
+section>article.srv>.frame>img{width:100%;}
+
+section>article.srv>.explain{
+	float:left;
+	width:450px;
+}
+section>article.srv>.explain>h3{
+	margin-top:50px;
+	color:#444;
+	font-weight:400;
+	font-size:54px;
+	line-height:62px;
+}
+section>article.srv>.explain>p{
+	margin-top:20px;
+	padding-left:5px;
+	font-size:14px;
+	line-height:25px;
+}
+
+
+
+/* 언제 어디서나 무료 메시지 */
+section>article.line_msg>.explain{
+	margin-left:55px;
+}
+
+
+/* 무료영상/음성 통화 */
+section>article.line_tel>.explain>p{
+	margin-top:20px;
+	font-size:14px;
+	line-height:25px;
+}
+
+section>article.line_tel>.explain>p>span{
+	display:block;
+	margin-top:20px;
+}
+
+/* 대화가 더욱 즐거워지는 LINE 스티커 */
+section>article.line_sticker>.frame{
+	width:598px;
+	height:730px;
+	margin:0 50px 0 -150px;
+}
+section>article.line_sticker>.explain{
+	margin-top:70px;
+}
+
+/* 사진/동영상 공유에서 음성 메시지까지 */
+
+
+/* 최신소식과 쿠폰 */
+section>article.line_cupon>.explain{
+	margin-left:55px;
+}
+
+
+/*타임라인, Keep, 간편한 친구맺기, Live, 페이스이펙트*/
+section>article.line_friends{
+	padding-bottom:100px;
+}
+section>article.line_friends>ul>li{
+	float:left;
+	width:300px;
+	margin:0 30px 50px 0;
+}
+section>article.line_friends>ul>li:nth-child(3){
+	margin-right:0;
+}
+section>article.line_friends>ul>li>span{
+	display:block;
+	width:160px;
+	height:284px;
+}
+section>article.line_friends>ul>li>span>img{width:100%;}
+
+section>article.line_friends>ul>li>h4{
+	margin:10px 0;
+}
+section>article.line_friends>ul>li>h4>a{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	margin-left:5px;
+	text-indent:-9999px;
+	background-image:url(../images/line_header_sp_sns.png);
+	background-position:-834px 0;
+	background-repeat:no-repeat;
+}
+section>article.line_friends>ul>li>p{line-height:20px;}
+
+
+/*푸터영역*/
+footer{background-color:#333;}
+footer>.container{
+	position:relative;/*인증로고 2개를 위해*/
+	width:960px;
+	height:70px;
+	margin:0 auto;
+	padding-top:30px;
+}
+footer>.container>nav>.fnb{
+	font-size:11px;
+	text-align:center;
+}
+footer>.container>nav>.fnb>a{
+	color:#acacac;
+}
+footer>.container>nav>.fnb>.bar{
+	margin:0 8px;
+}
+footer>.container>address{
+	color:#acacac;
+	margin-top:15px;
+	font-weight:800;
+	text-align:center;
+}
+footer>.container>.validator{
+	display:block;
+	left:50%;
+	top:50%;
+	position:absolute;
+	width:80px;
+	height:15px;
+	margin:12px 0 0 120px;
+	text-indent:-9999px;
+	background-image:url(../images/line_footer_img_validator.png);
+	background-repeat:no-repeat;
+}
+footer>.container>.wa{
+	display:block;
+	left:50%;
+	top:50%;
+	position:absolute;
+	width:35px;
+	height:35px;
+	margin:3px 0 0 220px;
+	text-indent:-9999px;
+	background-image:url(../images/line_footer_img_wa.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
