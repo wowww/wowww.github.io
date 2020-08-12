@@ -75,8 +75,9 @@
 }
 
 .term-group input {
-  position: absolute;
   z-index: -1;
+  position: absolute;
+  left: -72px;
   margin-top: 11px;
 }
 
@@ -97,6 +98,7 @@
 .terms-pop-btn button {
   outline: none;
   border: none;
+  background-color: transparent;
   font-size: 0.9em;
   font-weight: 600;
   cursor: pointer;
