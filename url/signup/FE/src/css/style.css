@@ -4,7 +4,9 @@
 
 .wrap {
   margin: 0 auto;
-  width: 500px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .link {
@@ -224,4 +226,9 @@
 
 .userLogin {
   margin: 20px 0 0;
+}
+
+@media screen and (max-width: 474px) {
+  .join-button {display: block;}
+  .join-button button:first-child {margin-bottom: 10px;}
 }
